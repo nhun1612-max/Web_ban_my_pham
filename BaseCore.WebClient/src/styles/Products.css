@@ -1,0 +1,254 @@
+/* ============================================================
+   Products.css — Trang Quản lý Sản phẩm
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.products-page,
+.products-page *:not(i),
+.products-modal,
+.products-modal *:not(i) {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ────────────────────────────────────────────
+   CARD
+──────────────────────────────────────────── */
+.products-page .card {
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+}
+.products-page .card-header {
+    background: #fff !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 14px 20px !important;
+}
+.products-page .card-footer {
+    background: #fff !important;
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+    font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   TABLE
+──────────────────────────────────────────── */
+.products-page .table { font-size: 13.5px; color: #1f2937; }
+.products-page .thead-dark th {
+    background-color: #f8f9fb !important;
+    color: #6b7280 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-top: none !important;
+    padding: 11px 16px !important;
+}
+.products-page .table td {
+    border-color: #f3f4f6 !important;
+    vertical-align: middle !important;
+    padding: 11px 14px !important;
+}
+.products-page .table-hover tbody tr:hover { background-color: #fafbff !important; }
+
+/* ────────────────────────────────────────────
+   BADGES
+──────────────────────────────────────────── */
+.products-page .badge {
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    padding: 4px 8px !important;
+}
+.products-page .badge-success  { background: #dcfce7 !important; color: #166534 !important; }
+.products-page .badge-warning  { background: #fef9c3 !important; color: #854d0e !important; }
+.products-page .badge-danger   { background: #fee2e2 !important; color: #991b1b !important; }
+.products-page .badge-light    { background: #f3f4f6 !important; color: #374151 !important; border: none !important; }
+
+/* ────────────────────────────────────────────
+   BUTTONS
+──────────────────────────────────────────── */
+.products-page .btn { font-size: 13px !important; font-weight: 500 !important; border-radius: 8px !important; }
+.products-page .btn-success { background: #16a34a !important; border-color: #16a34a !important; }
+.products-page .btn-outline-info   { border-radius: 6px !important; }
+.products-page .btn-outline-danger  { border-radius: 6px !important; }
+
+/* ────────────────────────────────────────────
+   FORM CONTROLS
+──────────────────────────────────────────── */
+.products-page .form-control,
+.products-modal .form-control {
+    font-size: 13.5px;
+    border-radius: 8px !important;
+    border-color: #e5e7eb !important;
+    color: #1f2937;
+}
+.products-page .form-control:focus,
+.products-modal .form-control:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12) !important;
+}
+.products-page .input-group-text {
+    border-radius: 8px 0 0 8px !important;
+    border-color: #e5e7eb !important;
+    background: #f9fafb; color: #9ca3af; font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   PAGINATION
+──────────────────────────────────────────── */
+.products-page .page-link {
+    font-size: 13px !important; font-weight: 500 !important;
+    border-radius: 6px !important; margin: 0 2px;
+    border-color: #e5e7eb; color: #374151;
+}
+.products-page .page-item.active .page-link {
+    background-color: #3b82f6 !important;
+    border-color: #3b82f6 !important; color: #fff !important;
+}
+
+/* ────────────────────────────────────────────
+   BREADCRUMB
+──────────────────────────────────────────── */
+.products-page .breadcrumb { font-size: 12px; background: transparent; padding: 0; margin: 0; }
+
+/* ────────────────────────────────────────────
+   MODAL
+──────────────────────────────────────────── */
+.products-modal .modal-content {
+    border-radius: 14px !important;
+    border: none !important;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.16) !important;
+}
+.products-modal .modal-header {
+    border-radius: 14px 14px 0 0 !important;
+    padding: 16px 22px !important;
+}
+.products-modal .modal-title { font-size: 15px !important; font-weight: 600 !important; }
+.products-modal .modal-footer {
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 14px 14px !important;
+}
+.products-modal .modal-body { padding: 24px !important; background: #f8f9fb !important; }
+
+/* ── Section header trong modal ── */
+.prod-section-head {
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #6b7280;
+    border-bottom: 1.5px solid #e5e7eb;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.prod-section-head i { color: #3b82f6; font-size: 13px; }
+
+/* ── Label ── */
+.prod-label {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-bottom: 5px !important;
+    display: block;
+}
+
+/* ── Inner card trong modal ── */
+.products-modal .card {
+    border-radius: 10px !important;
+    border: none !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+}
+.products-modal .card-body { padding: 18px 20px !important; }
+
+/* ────────────────────────────────────────────
+   ẢNH PREVIEW
+──────────────────────────────────────────── */
+.prod-img-preview {
+    width: 100%;
+    min-height: 200px;
+    background: #f8f9fb;
+    border: 2px dashed #e5e7eb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+.prod-img-preview:hover { border-color: #3b82f6; }
+.prod-img-preview img {
+    max-width: 100%; max-height: 200px;
+    object-fit: contain; border-radius: 8px;
+}
+.prod-img-empty {
+    display: flex; flex-direction: column;
+    align-items: center; color: #9ca3af;
+    font-size: 13px; padding: 20px;
+    text-align: center;
+}
+
+.prod-gallery-preview {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    background: #f8f9fb;
+    border: 1.5px dashed #e5e7eb;
+    border-radius: 10px; padding: 10px;
+    min-height: 76px;
+}
+.prod-gallery-preview img {
+    width: 62px; height: 62px;
+    object-fit: cover; border-radius: 7px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    transition: transform 0.15s;
+}
+.prod-gallery-preview img:hover { transform: scale(1.05); }
+
+/* ────────────────────────────────────────────
+   VARIANTS TABLE
+──────────────────────────────────────────── */
+.variants-table {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    margin-top: 10px;
+}
+.variants-table .table { margin: 0; font-size: 13px; }
+.variants-table .table thead th {
+    background: #f1f5f9 !important;
+    color: #64748b !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none !important;
+    padding: 9px 12px !important;
+}
+.variants-table .table td {
+    border-color: #f1f5f9 !important;
+    padding: 8px 10px !important;
+    vertical-align: middle !important;
+}
+.variants-table .table tr:hover { background: #fafbff !important; }
+.variants-empty {
+    background: #f8fafc;
+    border: 1.5px dashed #e2e8f0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 10px;
+}
+
+/* ────────────────────────────────────────────
+   UTILITIES
+──────────────────────────────────────────── */
+.opacity-15 { opacity: 0.15; }
