@@ -1,0 +1,238 @@
+/* ============================================================
+   Users.css — Trang Quản lý Người dùng
+   Màu chủ: Tím #6f42c1
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.users-page,
+.users-page *:not(i),
+.users-modal,
+.users-modal *:not(i) {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ────────────────────────────────────────────
+   CARD
+──────────────────────────────────────────── */
+.users-page .card {
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+}
+.users-page .card-header {
+    background: #fff !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 14px 20px !important;
+}
+.users-page .card-footer {
+    background: #fff !important;
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+    font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   TABLE
+──────────────────────────────────────────── */
+.users-page .table { font-size: 13.5px; color: #1f2937; }
+
+.users-page .table thead tr { background: #f8f9fb; }
+.users-page .table thead th {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #6b7280 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-top: none !important;
+    padding: 11px 14px !important;
+}
+.users-page .table td {
+    border-color: #f3f4f6 !important;
+    vertical-align: middle !important;
+    padding: 11px 14px !important;
+}
+.users-page .table-hover tbody tr:hover { background: #fafbff !important; }
+
+/* ────────────────────────────────────────────
+   AVATAR
+──────────────────────────────────────────── */
+.users-page .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ede9f8;
+    color: #6f42c1;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 2px solid #d8d0f0;
+}
+
+/* ────────────────────────────────────────────
+   BADGES — Vai trò & Trạng thái
+──────────────────────────────────────────── */
+.users-page .badge {
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    border-radius: 20px !important;
+    padding: 4px 10px !important;
+}
+.users-page .badge-success  { background: #dcfce7 !important; color: #166534 !important; }
+.users-page .badge-secondary{ background: #f3f4f6 !important; color: #6b7280 !important; }
+.users-page .badge-danger   { background: #fee2e2 !important; color: #991b1b !important; }
+.users-page .badge-info     { background: #dbeafe !important; color: #1e40af !important; }
+.users-page .badge-light    { background: #f9fafb !important; color: #6b7280 !important; }
+
+/* ────────────────────────────────────────────
+   VIP BADGES (gradient giữ nguyên)
+──────────────────────────────────────────── */
+.vip-badge {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    border-radius: 20px !important;
+    padding: 4px 10px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+.vip-diamond {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(58,123,213,0.3);
+}
+.vip-gold {
+    background: linear-gradient(45deg, #f6d365, #fda085);
+    color: #7a3e00;
+    box-shadow: 0 2px 6px rgba(253,160,133,0.3);
+}
+.vip-silver {
+    background: linear-gradient(45deg, #c9d6df, #eef2f3);
+    color: #444;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.vip-normal {
+    background: #f3f4f6;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+}
+
+/* ────────────────────────────────────────────
+   BUTTONS
+──────────────────────────────────────────── */
+.users-page .btn,
+.users-modal .btn {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+}
+.users-page .btn-add {
+    background: #6f42c1 !important;
+    border-color: #6f42c1 !important;
+    color: #fff !important;
+}
+.users-page .btn-add:hover { background: #5a32a3 !important; }
+.users-page .btn-outline-info   { border-radius: 6px !important; }
+.users-page .btn-outline-danger  { border-radius: 6px !important; }
+
+/* ────────────────────────────────────────────
+   FORM CONTROLS
+──────────────────────────────────────────── */
+.users-page .form-control,
+.users-modal .form-control {
+    font-size: 13.5px;
+    border-radius: 8px !important;
+    border-color: #e5e7eb !important;
+    color: #1f2937;
+}
+.users-page .form-control:focus,
+.users-modal .form-control:focus {
+    border-color: #6f42c1 !important;
+    box-shadow: 0 0 0 3px rgba(111,66,193,0.12) !important;
+}
+.users-page .input-group-text {
+    border-radius: 8px 0 0 8px !important;
+    border-color: #e5e7eb !important;
+    background: #f9fafb;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   PAGINATION
+──────────────────────────────────────────── */
+.users-page .page-link {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    margin: 0 2px;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+.users-page .page-item.active .page-link {
+    background-color: #6f42c1 !important;
+    border-color: #6f42c1 !important;
+    color: #fff !important;
+}
+
+/* ────────────────────────────────────────────
+   BREADCRUMB
+──────────────────────────────────────────── */
+.users-page .breadcrumb {
+    font-size: 12px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* ────────────────────────────────────────────
+   MODAL
+──────────────────────────────────────────── */
+.users-modal .modal-content {
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+}
+.users-modal .modal-header {
+    border-radius: 12px 12px 0 0 !important;
+    background: #6f42c1 !important;
+    padding: 14px 20px !important;
+}
+.users-modal .modal-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+.users-modal .modal-footer {
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+    background: #fafafa !important;
+}
+.users-modal .modal-body { padding: 20px 24px !important; }
+
+.users-modal label {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-bottom: 5px !important;
+}
+.users-modal .alert { font-size: 13px; border-radius: 8px; }
+
+.users-modal .btn-submit {
+    background: #6f42c1 !important;
+    border-color: #6f42c1 !important;
+    color: #fff !important;
+}
+.users-modal .btn-submit:hover { background: #5a32a3 !important; }
+
+/* ────────────────────────────────────────────
+   UTILITIES
+──────────────────────────────────────────── */
+.opacity-20 { opacity: 0.2; }
