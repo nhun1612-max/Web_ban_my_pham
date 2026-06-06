@@ -1,0 +1,244 @@
+/* ============================================================
+   Orders.css — Style riêng cho trang Quản lý Đơn hàng
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Font toàn trang ── */
+.orders-page,
+.orders-page *:not(i),
+.oders-modal,
+.orders-modal *:not(i) {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ────────────────────────────────────────────
+   TYPOGRAPHY
+──────────────────────────────────────────── */
+.orders-page h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.3px;
+}
+
+.orders-page label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.orders-page .text-muted { color: #9ca3af !important; }
+
+/* ────────────────────────────────────────────
+   CARD
+──────────────────────────────────────────── */
+.orders-page .card {
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+}
+
+.orders-page .card-header {
+    border-radius: 12px 12px 0 0 !important;
+    background: #fff !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    padding: 14px 18px !important;
+}
+
+.orders-page .card-footer {
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+    font-size: 13px;
+    background: #fff !important;
+}
+
+/* ────────────────────────────────────────────
+   TABLE
+──────────────────────────────────────────── */
+.orders-page .table {
+    font-size: 13.5px;
+    color: #1f2937;
+}
+
+.orders-page .thead-light th {
+    background-color: #f8f9fb !important;
+    color: #6b7280 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-top: none !important;
+    padding: 10px 14px !important;
+}
+
+.orders-page .table td {
+    border-color: #f3f4f6 !important;
+    vertical-align: middle !important;
+    padding: 10px 14px !important;
+}
+
+.orders-page .table-hover tbody tr:hover {
+    background-color: #fafbff !important;
+}
+
+/* ────────────────────────────────────────────
+   FORM CONTROLS
+──────────────────────────────────────────── */
+.orders-page .form-control,
+.orders-modal .form-control {
+    font-size: 13.5px;
+    border-radius: 8px !important;
+    border-color: #e5e7eb !important;
+    color: #1f2937;
+}
+
+.orders-page .form-control:focus,
+.orders-modal .form-control:focus {
+    border-color: #f97316 !important;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12) !important;
+}
+
+.orders-page .input-group-text {
+    border-radius: 8px 0 0 8px !important;
+    border-color: #e5e7eb !important;
+    background: #f9fafb;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   BUTTONS
+──────────────────────────────────────────── */
+.orders-page .btn,
+.orders-modal .btn {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+}
+
+.orders-page .btn-primary,
+.orders-modal .btn-primary {
+    background-color: #f97316 !important;
+    border-color: #f97316 !important;
+}
+
+.orders-page .btn-primary:hover,
+.orders-modal .btn-primary:hover {
+    background-color: #ea6c0a !important;
+}
+
+.orders-page .btn-outline-secondary { border-radius: 8px !important; }
+
+/* ────────────────────────────────────────────
+   BADGES — trạng thái đơn hàng
+──────────────────────────────────────────── */
+.orders-page .badge {
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    border-radius: 20px !important;
+    padding: 5px 10px !important;
+    letter-spacing: 0;
+}
+
+/* Pending */
+.orders-page .status-pending   { background: #fef9c3; color: #854d0e; }
+/* Processing */
+.orders-page .status-processing { background: #dbeafe; color: #1e40af; }
+/* Shipping */
+.orders-page .status-shipping  { background: #e0e7ff; color: #3730a3; }
+/* Delivered */
+.orders-page .status-delivered { background: #dcfce7; color: #166534; }
+/* Cancelled */
+.orders-page .status-cancelled { background: #fee2e2; color: #991b1b; }
+/* Returned */
+.orders-page .status-returned  { background: #f3f4f6; color: #374151; }
+
+/* ────────────────────────────────────────────
+   PAGINATION
+──────────────────────────────────────────── */
+.orders-page .page-link {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    margin: 0 2px;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+
+.orders-page .page-item.active .page-link {
+    background-color: #f97316 !important;
+    border-color: #f97316 !important;
+    color: white !important;
+}
+
+/* ────────────────────────────────────────────
+   MODAL
+──────────────────────────────────────────── */
+.orders-modal .modal-content {
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+    font-size: 13.5px;
+}
+
+.orders-modal .modal-header {
+    border-radius: 12px 12px 0 0 !important;
+    padding: 14px 20px !important;
+}
+
+.orders-modal .modal-header.bg-primary { background: #f97316 !important; }
+
+.orders-modal .modal-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+.orders-modal .modal-body { padding: 20px !important; }
+
+.orders-modal .modal-footer {
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+}
+
+/* ────────────────────────────────────────────
+   HÓA ĐƠN IN (print area)
+──────────────────────────────────────────── */
+.invoice-area {
+    padding: 24px;
+    background: #fff;
+    font-size: 13.5px;
+    color: #1f2937;
+}
+
+.invoice-area h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.invoice-area .table {
+    font-size: 13px !important;
+}
+
+@media print {
+    .orders-modal .modal-header,
+    .orders-modal .modal-footer,
+    .no-print { display: none !important; }
+    .invoice-area { padding: 0; }
+}
+
+/* ────────────────────────────────────────────
+   UTILITIES
+──────────────────────────────────────────── */
+.orders-page .breadcrumb {
+    font-size: 12px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.opacity-50 { opacity: 0.5; }

@@ -1,0 +1,263 @@
+/* ============================================================
+   Vouchers.css — Trang Quản lý Mã giảm giá
+   Đồng bộ với Products.css / Orders.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.vouchers-page,
+.vouchers-page *:not(i),
+.vouchers-modal,
+.vouchers-modal *:not(i) {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ────────────────────────────────────────────
+   CARD
+──────────────────────────────────────────── */
+.vouchers-page .card {
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+}
+.vouchers-page .card-header {
+    background: #fff !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 14px 20px !important;
+}
+.vouchers-page .card-footer {
+    background: #fff !important;
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+    font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   TABLE
+──────────────────────────────────────────── */
+.vouchers-page .table {
+    font-size: 13.5px;
+    color: #1f2937;
+}
+.vouchers-page .thead-dark th {
+    background-color: #f8f9fb !important;
+    color: #6b7280 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-top: none !important;
+    padding: 11px 16px !important;
+}
+.vouchers-page .table td {
+    border-color: #f3f4f6 !important;
+    vertical-align: middle !important;
+    padding: 12px 16px !important;
+}
+.vouchers-page .table-hover tbody tr:hover {
+    background-color: #fafbff !important;
+}
+
+/* ────────────────────────────────────────────
+   BADGE TRẠNG THÁI
+──────────────────────────────────────────── */
+.vouchers-page .badge {
+    font-size: 11.5px !important;
+    font-weight: 500 !important;
+    border-radius: 20px !important;
+    padding: 4px 10px !important;
+}
+.vouchers-page .badge-active   { background: #dcfce7; color: #166534; }
+.vouchers-page .badge-inactive { background: #fee2e2; color: #991b1b; }
+.vouchers-page .badge-type-pct    { background: #dbeafe; color: #1e40af; }
+.vouchers-page .badge-type-fixed  { background: #fef9c3; color: #854d0e; }
+.vouchers-page .badge-type-ship   { background: #e0e7ff; color: #3730a3; }
+
+/* ────────────────────────────────────────────
+   CODE TAG
+──────────────────────────────────────────── */
+.vouchers-page .code-tag {
+    font-family: 'Courier New', monospace !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    background: #f3f4f6;
+    color: #8B1A1A;
+    border: 1px dashed #d1d5db;
+    border-radius: 6px;
+    padding: 3px 10px;
+    letter-spacing: 1px;
+}
+
+/* ────────────────────────────────────────────
+   BUTTONS
+──────────────────────────────────────────── */
+.vouchers-page .btn,
+.vouchers-modal .btn {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+}
+.vouchers-page .btn-add {
+    background: #8B1A1A !important;
+    border-color: #8B1A1A !important;
+    color: #fff !important;
+}
+.vouchers-page .btn-add:hover { background: #6b1414 !important; }
+.vouchers-modal .btn-primary {
+    background: #8B1A1A !important;
+    border-color: #8B1A1A !important;
+}
+.vouchers-modal .btn-primary:hover { background: #6b1414 !important; }
+
+/* ────────────────────────────────────────────
+   FORM TRONG MODAL
+──────────────────────────────────────────── */
+.vouchers-modal .modal-content {
+    border-radius: 14px !important;
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+}
+.vouchers-modal .modal-header {
+    border-radius: 14px 14px 0 0 !important;
+    background: #8B1A1A !important;
+    padding: 16px 22px !important;
+}
+.vouchers-modal .modal-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+.vouchers-modal .modal-footer {
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 14px 14px !important;
+    background: #fafafa !important;
+}
+
+/* Section header trong modal */
+.vouchers-modal .section-head {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #8B1A1A;
+    border-bottom: 1.5px solid #fde8e8 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 16px !important;
+    margin-top: 8px !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.vouchers-modal .section-head i { font-size: 13px; }
+
+.vouchers-modal .form-control,
+.vouchers-modal .form-select {
+    font-size: 13.5px !important;
+    border-radius: 8px !important;
+    border-color: #e5e7eb !important;
+    color: #1f2937 !important;
+    padding: 9px 12px !important;
+}
+.vouchers-modal .form-control:focus,
+.vouchers-modal .form-select:focus {
+    border-color: #8B1A1A !important;
+    box-shadow: 0 0 0 3px rgba(139,26,26,0.1) !important;
+}
+.vouchers-modal label {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-bottom: 5px !important;
+    display: block;
+}
+.vouchers-modal .hint {
+    font-size: 11.5px;
+    color: #9ca3af;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* VIP checkboxes */
+.vouchers-modal .vip-group {
+    background: #faf9f7;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px 18px;
+}
+.vouchers-modal .vip-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1.5px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.vouchers-modal .vip-check:hover    { border-color: #8B1A1A; background: #fff8f8; }
+.vouchers-modal .vip-check.checked  { border-color: #8B1A1A; background: #fff1f1; }
+.vouchers-modal .vip-check input    { display: none; }
+.vouchers-modal .vip-dot {
+    width: 18px; height: 18px;
+    border-radius: 4px;
+    border: 2px solid #d1d5db;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; color: transparent;
+    flex-shrink: 0;
+    transition: all 0.15s;
+}
+.vouchers-modal .vip-check.checked .vip-dot {
+    background: #8B1A1A;
+    border-color: #8B1A1A;
+    color: #fff;
+}
+.vouchers-modal .vip-label { font-size: 13px !important; font-weight: 600 !important; }
+
+/* Target ID input highlight */
+.vouchers-modal .target-box {
+    background: #f8f9fb;
+    border: 1.5px dashed #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 4px;
+}
+.vouchers-modal .target-box.customer {
+    border-color: #6ee7b7;
+    background: #f0fdf4;
+}
+
+/* Switch */
+.vouchers-modal .switch-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    height: 42px;
+}
+.vouchers-modal .switch-wrap label {
+    margin: 0 !important;
+    font-size: 13px !important;
+    color: #374151 !important;
+    cursor: pointer;
+}
+
+/* Pagination */
+.vouchers-page .page-link {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    margin: 0 2px;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+.vouchers-page .page-item.active .page-link {
+    background-color: #8B1A1A !important;
+    border-color: #8B1A1A !important;
+}
