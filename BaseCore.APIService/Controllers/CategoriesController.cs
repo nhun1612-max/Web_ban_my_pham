@@ -13,9 +13,9 @@ namespace BaseCore.APIService.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly ICategoryRepositoryEF _categoryRepository;
+        private readonly ICategoryRepository _categoryRepository;
 
-        public CategoriesController(ICategoryRepositoryEF categoryRepository)
+        public CategoriesController(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
         }
@@ -33,6 +33,37 @@ namespace BaseCore.APIService.Controllers
         /// <summary>
         /// Get category by ID
         /// </summary>
+        /// 
+        /// <summary>
+        /// Tìm kiếm và phân trang danh mục (Chuyên nghiệp)
+        /// </summary>
+        [HttpGet("search")]
+        public async Task<IActionResult> Search([FromQuery] string? keyword, [FromQuery] int page = 1, [FromQuery] int pageSize = 5)
+        {
+            // Đảm bảo page và pageSize luôn hợp lệ
+            page = page < 1 ? 1 : page;
+            pageSize = pageSize < 1 ? 5 : pageSize;
+
+            // Gọi xuống tầng Repository để xử lý logic DB
+            var (items, totalCount) = await _categoryRepository.GetPagedAsync(keyword, page, pageSize);
+
+            // Tính tổng số trang
+            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+
+            // Trả về đúng format mà React đang chờ
+            return Ok(new
+            {
+                items = items,
+                totalCount = totalCount,
+                totalPages = totalPages,
+                currentPage = page
+            });
+        }
+
+
+
+
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -93,7 +124,7 @@ namespace BaseCore.APIService.Controllers
             if (category == null)
                 return NotFound(new { message = "Category not found" });
 
-            await _categoryRepository.DeleteByIdAsync(category);
+            await _categoryRepository.DeleteAsync(category);
             return Ok(new { message = "Category deleted successfully" });
         }
     }
