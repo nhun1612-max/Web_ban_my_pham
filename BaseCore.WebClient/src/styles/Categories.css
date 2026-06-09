@@ -1,0 +1,226 @@
+/* ============================================================
+   Categories.css — Trang Quản lý Danh mục
+   Đồng bộ với Products.css / Orders.css / Vouchers.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.categories-page,
+.categories-page *:not(i),
+.categories-modal,
+.categories-modal *:not(i) {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* ────────────────────────────────────────────
+   TYPOGRAPHY
+──────────────────────────────────────────── */
+.categories-page h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.3px;
+}
+
+.categories-page .text-muted { color: #9ca3af !important; }
+
+/* ────────────────────────────────────────────
+   CARD
+──────────────────────────────────────────── */
+.categories-page .card {
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06) !important;
+}
+
+.categories-page .card-header {
+    background: #fff !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    border-radius: 12px 12px 0 0 !important;
+    padding: 14px 20px !important;
+}
+
+.categories-page .card-footer {
+    background: #fff !important;
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+    font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   TABLE
+──────────────────────────────────────────── */
+.categories-page .table {
+    font-size: 13.5px;
+    color: #1f2937;
+}
+
+.categories-page .table thead tr {
+    background: #f8f9fb;
+}
+
+.categories-page .table thead th {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #6b7280 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-top: none !important;
+    padding: 11px 16px !important;
+    background: #f8f9fb;
+}
+
+.categories-page .table td {
+    border-color: #f3f4f6 !important;
+    vertical-align: middle !important;
+    padding: 11px 16px !important;
+}
+
+.categories-page .table-hover tbody tr:hover {
+    background-color: #fafbff !important;
+}
+
+.categories-page .table .font-weight-bold {
+    font-weight: 600 !important;
+}
+
+/* ────────────────────────────────────────────
+   FORM CONTROLS
+──────────────────────────────────────────── */
+.categories-page .form-control {
+    font-size: 13.5px;
+    border-radius: 8px !important;
+    border-color: #e5e7eb !important;
+    color: #1f2937;
+}
+
+.categories-page .form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 3px rgba(40,167,69,0.12) !important;
+}
+
+.categories-page .input-group-text {
+    border-radius: 8px 0 0 8px !important;
+    border-color: #e5e7eb !important;
+    background: #f9fafb;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* ────────────────────────────────────────────
+   BUTTONS
+──────────────────────────────────────────── */
+.categories-page .btn,
+.categories-modal .btn {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+}
+
+.categories-page .btn-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.categories-page .btn-success:hover {
+    background-color: #218838 !important;
+}
+
+.categories-page .btn-outline-info   { border-radius: 6px !important; }
+.categories-page .btn-outline-danger  { border-radius: 6px !important; }
+
+/* ────────────────────────────────────────────
+   PAGINATION
+──────────────────────────────────────────── */
+.categories-page .page-link {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    margin: 0 2px;
+    border-color: #e5e7eb;
+    color: #374151;
+}
+
+.categories-page .page-item.active .page-link {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #fff !important;
+}
+
+/* ────────────────────────────────────────────
+   BREADCRUMB
+──────────────────────────────────────────── */
+.categories-page .breadcrumb {
+    font-size: 12px;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+/* ────────────────────────────────────────────
+   MODAL
+──────────────────────────────────────────── */
+.categories-modal .modal-content {
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
+}
+
+.categories-modal .modal-header {
+    border-radius: 12px 12px 0 0 !important;
+    padding: 14px 20px !important;
+}
+
+.categories-modal .modal-header.bg-success {
+    background: #28a745 !important;
+}
+
+.categories-modal .modal-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+.categories-modal .modal-footer {
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 12px 12px !important;
+    background: #fafafa !important;
+}
+
+.categories-modal .form-control {
+    font-size: 13.5px;
+    border-radius: 8px !important;
+    border-color: #e5e7eb !important;
+}
+
+.categories-modal .form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 3px rgba(40,167,69,0.12) !important;
+}
+
+.categories-modal label {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin-bottom: 5px !important;
+}
+
+.categories-modal .alert {
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+.categories-modal .btn-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.categories-modal .btn-success:hover {
+    background-color: #218838 !important;
+}
+
+/* ────────────────────────────────────────────
+   UTILITIES
+──────────────────────────────────────────── */
+.opacity-20 { opacity: 0.2; }
